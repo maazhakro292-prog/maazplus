@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Welcome to MAAZ PLUS</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #080b14;
+            color: white;
+        }
+
+        /* NAVBAR */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 7%;
+            background: #0d1220;
+            border-bottom: 1px solid #222a3d;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .logo span {
+            color: #00e5ff;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #00e5ff;
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 30px;
+            background:
+                radial-gradient(circle at top, #12304a, transparent 45%),
+                #080b14;
+        }
+
+        .hero h1 {
+            font-size: clamp(45px, 8vw, 90px);
+            margin-bottom: 15px;
+        }
+
+        .hero h1 span {
+            color: #00e5ff;
+        }
+
+        .hero p {
+            font-size: 21px;
+            color: #b8c2d6;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 28px;
+            margin: 8px;
+            border-radius: 30px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            background: #00a9c7;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            background: #00e5ff;
+            color: #061018;
+        }
+
+        .btn.dark {
+            background: transparent;
+            border: 1px solid #00e5ff;
+        }
+
+        /* SECTIONS */
+        section {
+            padding: 80px 7%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 40px;
+            margin-bottom: 45px;
+        }
+
+        .section-title span {
+            color: #00e5ff;
+        }
+
+        /* CARDS */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: #101625;
+            padding: 30px;
+            border-radius: 18px;
+            border: 1px solid #222c40;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            border-color: #00e5ff;
+            box-shadow: 0 10px 35px rgba(0, 229, 255, 0.12);
+        }
+
+        .icon {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            font-size: 25px;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: #aeb8cb;
+            line-height: 1.6;
+        }
+
+        /* FEATURE */
+        .feature {
+            background: #0d1220;
+        }
+
+        .big-box {
+            max-width: 900px;
+            margin: auto;
+            padding: 45px;
+            border-radius: 25px;
+            text-align: center;
+            background: linear-gradient(135deg, #101b2e, #0c1524);
+            border: 1px solid #263650;
+        }
+
+        .big-box h2 {
+            font-size: 35px;
+            margin-bottom: 15px;
+        }
+
+        .big-box p {
+            color: #b8c2d6;
+            line-height: 1.7;
+        }
+
+        /* ABOUT */
+        .about {
+            text-align: center;
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .about p {
+            color: #b8c2d6;
+            line-height: 1.8;
+            font-size: 18px;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #05070c;
+            color: #8994aa;
+        }
+
+        footer strong {
+            color: #00e5ff;
+        }
+
+        /* MOBILE */
+        @media (max-width: 700px) {
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <div class="logo">MAAZ <span>+</span></div>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#learning">Learning</a></li>
+            <li><a href="#gaming">Gaming</a></li>
+            <li><a href="#sports">Sports</a></li>
+            <li><a href="#challenges">Challenges</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+
+        <h1>WELCOME TO <span>MAAZ PLUS</span></h1>
+
+        <p>
+            Learn. Play. Compete. Become Legendary.
+        </p>
+
+        <div>
+            <a href="#learning" class="btn">🚀 Explore</a>
+            <a href="#about" class="btn dark">About MAAZ PLUS</a>
+        </div>
+
+    </section>
+
+
+    <!-- LEARNING -->
+    <section id="learning">
+
+        <h2 class="section-title">
+            📚 <span>Learning</span> Plus
+        </h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <div class="icon">🧠</div>
+                <h3>Knowledge</h3>
+                <p>
+                    Discover interesting facts, science,
+                    technology and general knowledge.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">💻</div>
+                <h3>Technology</h3>
+                <p>
+                    Learn about computers, coding,
+                    websites and modern technology.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">📝</div>
+                <h3>Study Zone</h3>
+                <p>
+                    Useful learning resources and simple
+                    explanations for school topics.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- GAMING -->
+    <section id="gaming" class="feature">
+
+        <h2 class="section-title">
+            🎮 <span>Gaming</span> Plus
+        </h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <div class="icon">🔥</div>
+                <h3>Game Guides</h3>
+                <p>
+                    Tips, tricks and guides to help you
+                    improve your gaming skills.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🕹️</div>
+                <h3>Games</h3>
+                <p>
+                    Explore popular games and discover
+                    new gaming experiences.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🏆</div>
+                <h3>Gaming Challenges</h3>
+                <p>
+                    Take on challenges and test your
+                    gaming knowledge.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SPORTS -->
+    <section id="sports">
+
+        <h2 class="section-title">
+            ⚽ <span>Sports</span> Plus
+        </h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <div class="icon">⚽</div>
+                <h3>Football</h3>
+                <p>
+                    Football facts, players, tournaments
+                    and legendary moments.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🏏</div>
+                <h3>Cricket</h3>
+                <p>
+                    Cricket knowledge, players,
+                    tournaments and records.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🏅</div>
+                <h3>Champions</h3>
+                <p>
+                    Explore legendary athletes and
+                    unforgettable sporting achievements.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CHALLENGES -->
+    <section id="challenges" class="feature">
+
+        <h2 class="section-title">
+            🏆 <span>Challenges</span>
+        </h2>
+
+        <div class="big-box">
+
+            <h2>Can You Become A Legend?</h2>
+
+            <p>
+                Test your knowledge with future quizzes,
+                gaming challenges, sports questions and
+                learning competitions.
+            </p>
+
+            <a href="#home" class="btn">Start Exploring</a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section id="about">
+
+        <div class="about">
+
+            <h2 class="section-title">
+                👑 About <span>MAAZ PLUS</span>
+            </h2>
+
+            <p>
+                MAAZ PLUS is a personal website combining
+                learning, gaming and sports in one place.
+                The goal is simple: learn new things,
+                enjoy games, follow sports and keep
+                challenging yourself.
+            </p>
+
+            <br>
+
+            <p>
+                <strong>Created by Maaz</strong>
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>
+            © 2026 <strong>MAAZ PLUS</strong> — Learn. Play. Compete.
+        </p>
+
+    </footer>
+
+</body>
+</html>
